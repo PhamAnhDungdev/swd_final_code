@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3aqlmwb27RjzVuFUE30PGdLeXcQxQ3j+YnzhvMs8ZkimnM2G/SqpdPMo+0VSu4LwH+XkwLF4PpHHdx2OCwzWpA==",
+  "success": true,
+  "projectFilePath": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\OnlineLearningIT.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bravo 15\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512"
+  ],
+  "logs": []
+}
