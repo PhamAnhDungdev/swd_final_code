@@ -1,0 +1,193 @@
+﻿@model OnlineLearningIT.Models.Course
+@{
+    ViewData["Title"] = "Chỉnh Sửa Khóa Học";
+}
+
+<div class="edit-course-container">
+    <div class="edit-course-header">
+        <h1>Chỉnh Sửa Khóa Học</h1>
+        <a asp-action="Index" class="btn-back">
+            <i class="fa fa-arrow-left"></i> Quay lại danh sách
+        </a>
+    </div>
+
+    <div class="edit-course-content">
+        <div class="edit-course-form">
+            <form asp-action="Edit" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CourseId" />
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label asp-for="Title">Tiêu đề khóa học</label>
+                        <input asp-for="Title" class="form-control" placeholder="Nhập tiêu đề khóa học" />
+                        <span asp-validation-for="Title" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label asp-for="Description">Mô tả</label>
+                        <textarea asp-for="Description" class="form-control" rows="4" placeholder="Mô tả chi tiết về khóa học"></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="ImageUrl">Hình ảnh</label>
+                        <div class="image-input-container">
+                            <input asp-for="ImageUrl" class="form-control" placeholder="URL hình ảnh khóa học" />
+                            <div class="image-preview">
+                                @if (!string.IsNullOrEmpty(Model.ImageUrl))
+                                {
+                                    <img src="@Model.ImageUrl" alt="Course preview" id="imagePreview" />
+                                }
+                                else
+                                {
+                                    <div class="no-image">Chưa có hình ảnh</div>
+                                }
+                            </div>
+                        </div>
+                        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Duration">Thời lượng</label>
+                        <input asp-for="Duration" class="form-control" placeholder="VD: 10 giờ, 8 tuần" />
+                        <span asp-validation-for="Duration" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Price">Giá (VNĐ)</label>
+                        <input asp-for="Price" class="form-control" type="number" min="0" placeholder="Nhập giá khóa học" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Level">Cấp độ</label>
+                        <select asp-for="Level" class="form-control">
+                            <option value="Beginner">Mới bắt đầu</option>
+                            <option value="Intermediate">Trung cấp</option>
+                            <option value="Advanced">Nâng cao</option>
+                        </select>
+                        <span asp-validation-for="Level" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Category">Danh mục</label>
+                        <select asp-for="Category" class="form-control">
+                            <option value="Programming">Lập trình</option>
+                            <option value="Design">Thiết kế</option>
+                            <option value="Business">Kinh doanh</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Language">Ngoại ngữ</option>
+                            <option value="Other">Khác</option>
+                        </select>
+                        <span asp-validation-for="Category" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="InstructorId">Giảng viên</label>
+                        <select asp-for="InstructorId" class="form-control" asp-items="ViewBag.InstructorId"></select>
+                        <span asp-validation-for="InstructorId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Status">Trạng thái</label>
+                        <select asp-for="Status" class="form-control">
+                            <option value="Active">Hoạt động</option>
+                            <option value="Inactive">Ngừng hoạt động</option>
+                            <option value="Draft">Bản nháp</option>
+                        </select>
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row dates">
+                    <div class="form-group">
+                        <label asp-for="CreatedAt">Ngày tạo</label>
+                        <input asp-for="CreatedAt" class="form-control" type="datetime-local" readonly />
+                        <span asp-validation-for="CreatedAt" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="UpdatedAt">Ngày cập nhật</label>
+                        <input asp-for="UpdatedAt" class="form-control" type="datetime-local" value="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")" />
+                        <span asp-validation-for="UpdatedAt" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-save">
+                        <i class="fa fa-save"></i> Lưu thay đổi
+                    </button>
+                    <a asp-action="Index" class="btn-cancel">Hủy</a>
+                </div>
+            </form>
+        </div>
+
+        <div class="edit-course-sidebar">
+            <div class="sidebar-section">
+                <h3>Hướng dẫn</h3>
+                <ul class="sidebar-tips">
+                    <li><strong>Tiêu đề:</strong> Đặt tiêu đề ngắn gọn, thu hút người học.</li>
+                    <li><strong>Mô tả:</strong> Cung cấp thông tin chi tiết về nội dung khóa học và lợi ích của nó.</li>
+                    <li><strong>Hình ảnh:</strong> Chọn hình ảnh chất lượng cao, thể hiện nội dung khóa học.</li>
+                    <li><strong>Giá:</strong> Đặt giá phù hợp với giá trị mang lại và đối tượng học viên.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // JavaScript để xem trước hình ảnh
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageUrlInput = document.querySelector('input[name="ImageUrl"]');
+        const imagePreview = document.getElementById('imagePreview');
+        const previewContainer = document.querySelector('.image-preview');
+        
+        if (imageUrlInput && previewContainer) {
+            imageUrlInput.addEventListener('input', function() {
+                const imageUrl = this.value.trim();
+                
+                if (imageUrl) {
+                    // Nếu có imagePreview element
+                    if (imagePreview) {
+                        imagePreview.src = imageUrl;
+                        imagePreview.style.display = 'block';
+                    } else {
+                        // Tạo mới nếu chưa có
+                        const img = document.createElement('img');
+                        img.src = imageUrl;
+                        img.id = 'imagePreview';
+                        img.alt = 'Course preview';
+                        
+                        // Xóa thông báo "Chưa có hình ảnh" nếu có
+                        const noImage = previewContainer.querySelector('.no-image');
+                        if (noImage) {
+                            previewContainer.removeChild(noImage);
+                        }
+                        
+                        previewContainer.appendChild(img);
+                    }
+                } else {
+                    // Hiển thị thông báo "Chưa có hình ảnh"
+                    previewContainer.innerHTML = '<div class="no-image">Chưa có hình ảnh</div>';
+                }
+            });
+        }
+    });
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

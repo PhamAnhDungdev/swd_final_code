@@ -1,7 +1,36 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\controllers\\coursecontroller\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\controllers\\coursecontroller\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\views\\course\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\views\\course\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\views\\course\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +55,105 @@
             {
               "$type": "Bookmark",
               "Name": "ST:4:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:6:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Course\\Edit.cshtml",
+              "RelativeDocumentMoniker": "OnlineLearningIT\\Views\\Course\\Edit.cshtml",
+              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Course\\Edit.cshtml",
+              "RelativeToolTip": "OnlineLearningIT\\Views\\Course\\Edit.cshtml",
+              "ViewState": "AQIAAIoAAAAAAAAAAAAAAJQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T01:43:18.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseController.cs",
+              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Controllers\\CourseController\\CourseController.cs",
+              "RelativeDocumentMoniker": "OnlineLearningIT\\Controllers\\CourseController\\CourseController.cs",
+              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Controllers\\CourseController\\CourseController.cs",
+              "RelativeToolTip": "OnlineLearningIT\\Controllers\\CourseController\\CourseController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T01:27:42.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "OnlineLearningIT\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "OnlineLearningIT\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T01:27:08.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "OnlineLearningIT\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "OnlineLearningIT\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAABMAAAAAAAAAAADwvxwAAABcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T01:26:32.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnlineLearningIT\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "OnlineLearningIT\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T01:26:24.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "OnlineLearningIT\\wwwroot\\css\\site.css",
+              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "OnlineLearningIT\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAKcBAAAAAAAAAAAuwLcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-18T01:25:58.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Course\\Index.cshtml",
+              "RelativeDocumentMoniker": "OnlineLearningIT\\Views\\Course\\Index.cshtml",
+              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Course\\Index.cshtml",
+              "RelativeToolTip": "OnlineLearningIT\\Views\\Course\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-18T01:23:32.285Z",
+              "EditorCaption": ""
             }
           ]
         }

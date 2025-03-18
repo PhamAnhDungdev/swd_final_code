@@ -1,0 +1,104 @@
+﻿@model IEnumerable<OnlineLearningIT.Models.Course>
+@{
+    ViewData["Title"] = "Danh Sách Khóa Học";
+}
+
+<div class="course-container">
+    <div class="course-header">
+        <h1 class="course-title">Cập Nhật Khóa Học</h1>
+        <a asp-action="Create" class="btn-create">
+            <i class="fa fa-plus-circle"></i> Tạo Khóa Học Mới
+        </a>
+    </div>
+
+    <div class="course-list">
+        <div class="course-filters">
+            <input type="text" id="courseSearch" class="course-search" placeholder="Tìm kiếm khóa học...">
+            <select id="categoryFilter" class="course-filter">
+                <option value="">Tất cả danh mục</option>
+                <!-- Có thể thêm các option từ danh sách category -->
+            </select>
+            <select id="levelFilter" class="course-filter">
+                <option value="">Tất cả cấp độ</option>
+                <option value="Beginner">Mới bắt đầu</option>
+                <option value="Intermediate">Trung cấp</option>
+                <option value="Advanced">Nâng cao</option>
+            </select>
+        </div>
+
+        <div class="course-grid">
+            @foreach (var item in Model)
+            {
+                <div class="course-card">
+                    <div class="course-image">
+                        @if (!string.IsNullOrEmpty(item.ImageUrl))
+                        {
+                            <img src="https://r2s.edu.vn/wp-content/uploads/2023/04/1.cac-khoa-hoc-cntt-online-co-chung-chi-cho-dan-it.png" alt="@item.Title">
+                        }
+                        else
+                        {
+                            <img src="https://r2s.edu.vn/wp-content/uploads/2023/04/1.cac-khoa-hoc-cntt-online-co-chung-chi-cho-dan-it.png" alt="Course placeholder">
+                        }
+                        <div class="course-price">@(item.Price > 0 ? $"{item.Price:N0} VNĐ" : "Miễn phí")</div>
+                    </div>
+                    <div class="course-content">
+                        <h3 class="course-card-title">@item.Title</h3>
+                        @* <div class="course-instructor">Giảng viên: @item.Instructor.UserId</div> *@
+                        <div class="course-info">
+                            <span class="course-level">@item.Level</span>
+                            <span class="course-duration"><i class="fa fa-clock-o"></i> @item.Duration</span>
+                        </div>
+                        <p class="course-description">@(item.Description?.Length > 100 ? item.Description.Substring(0, 100) + "..." : item.Description)</p>
+                        <div class="course-category">@item.Category</div>
+                        <div class="course-status @(item.Status == "Active" ? "status-active" : "status-inactive")">
+                            @item.Status
+                        </div>
+                    </div>
+                    <div class="course-actions">
+                        <a asp-action="Details" asp-route-id="@item.CourseId" class="btn-details">Chi tiết</a>
+                        <a asp-action="Edit" asp-route-id="@item.CourseId" class="btn-edit">Sửa</a>
+                        <a asp-action="Delete" asp-route-id="@item.CourseId" class="btn-delete">Xóa</a>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript để hỗ trợ tìm kiếm và lọc (có thể thêm sau)
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('courseSearch');
+        const categoryFilter = document.getElementById('categoryFilter');
+        const levelFilter = document.getElementById('levelFilter');
+        const courseCards = document.querySelectorAll('.course-card');
+        
+        // Hàm tìm kiếm và lọc
+        function filterCourses() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const categoryValue = categoryFilter.value.toLowerCase();
+            const levelValue = levelFilter.value.toLowerCase();
+            
+            courseCards.forEach(card => {
+                const title = card.querySelector('.course-card-title').textContent.toLowerCase();
+                const category = card.querySelector('.course-category').textContent.toLowerCase();
+                const level = card.querySelector('.course-level').textContent.toLowerCase();
+                
+                const matchesSearch = title.includes(searchTerm);
+                const matchesCategory = categoryValue === '' || category.includes(categoryValue);
+                const matchesLevel = levelValue === '' || level.includes(levelValue);
+                
+                if (matchesSearch && matchesCategory && matchesLevel) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+        
+        // Thêm event listeners
+        if (searchInput) searchInput.addEventListener('input', filterCourses);
+        if (categoryFilter) categoryFilter.addEventListener('change', filterCourses);
+        if (levelFilter) levelFilter.addEventListener('change', filterCourses);
+    });
+</script>

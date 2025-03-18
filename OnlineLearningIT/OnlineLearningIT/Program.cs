@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using OnlineLearningIT.Models;
+
 namespace OnlineLearningIT
 {
     public class Program
@@ -6,6 +9,10 @@ namespace OnlineLearningIT
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Services.AddDbContext<OnlineLearningItContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineLearningIT"),
+                sqlOptions => sqlOptions.EnableRetryOnFailure())
+            );
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
