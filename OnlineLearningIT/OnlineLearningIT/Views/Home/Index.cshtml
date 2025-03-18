@@ -1,8 +1,187 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home - LearningOnlineIT";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="home-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Học CNTT Online Hiệu Quả</h1>
+            <p class="hero-subtitle">Nâng cao kỹ năng với các khóa học chất lượng cao và chứng chỉ được công nhận.</p>
+            <div class="hero-buttons">
+                <a href="/Courses" class="btn btn-primary">Khám Phá Khóa Học</a>
+                <a href="/Account/Register" class="btn btn-secondary">Đăng Ký Ngay</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://r2s.edu.vn/wp-content/uploads/2023/04/1.cac-khoa-hoc-cntt-online-co-chung-chi-cho-dan-it.png" alt="Online Learning">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2 class="section-title">Tại Sao Chọn LearningOnlineIT?</h2>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="feature-title">Khóa Học Chuyên Ngành</h3>
+                <p class="feature-description">Nội dung được thiết kế bởi các chuyên gia IT hàng đầu, tập trung vào các kỹ năng thực tiễn cần thiết cho công việc.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="feature-title">Chứng Chỉ Giá Trị</h3>
+                <p class="feature-description">Nhận chứng chỉ được công nhận sau khi hoàn thành khóa học để tăng cơ hội việc làm và phát triển sự nghiệp.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">Cộng Đồng Hỗ Trợ</h3>
+                <p class="feature-description">Tham gia cộng đồng học viên và giảng viên năng động, sẵn sàng hỗ trợ và chia sẻ kiến thức.</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3 class="feature-title">Học Mọi Lúc, Mọi Nơi</h3>
+                <p class="feature-description">Truy cập khóa học trên mọi thiết bị và học theo tốc độ của riêng bạn, mọi lúc, mọi nơi.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <section class="courses-section">
+        <h2 class="section-title">Khóa Học Nổi Bật</h2>
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://r2s.edu.vn/wp-content/uploads/2023/04/1.cac-khoa-hoc-cntt-online-co-chung-chi-cho-dan-it.png" alt="SQL Server Course">
+                    <div class="course-price">50 VND</div>
+                </div>
+                <div class="course-content">
+                    <span class="course-level beginner">beginner</span>
+                    <h3 class="course-title">Introduction to SQL Server</h3>
+                    <p class="course-description">Learn the basics of SQL Server database management and querying.</p>
+                    <div class="course-meta">
+                        <span class="course-duration"><i class="far fa-clock"></i> 600 phút</span>
+                        <span class="course-lessons"><i class="far fa-file-alt"></i> 12 bài học</span>
+                    </div>
+                    <a href="/Courses/Details/1" class="course-button">Xem Chi Tiết</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://r2s.edu.vn/wp-content/uploads/2023/04/1.cac-khoa-hoc-cntt-online-co-chung-chi-cho-dan-it.png" alt="JavaScript Course">
+                    <div class="course-price">80 VND</div>
+                </div>
+                <div class="course-content">
+                    <span class="course-level advanced">advanced</span>
+                    <h3 class="course-title">Advanced JavaScript Programming</h3>
+                    <p class="course-description">Master advanced JavaScript concepts and modern frameworks.</p>
+                    <div class="course-meta">
+                        <span class="course-duration"><i class="far fa-clock"></i> 1200 phút</span>
+                        <span class="course-lessons"><i class="far fa-file-alt"></i> 20 bài học</span>
+                    </div>
+                    <a href="/Courses/Details/2" class="course-button">Xem Chi Tiết</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-image">
+                    <img src="https://r2s.edu.vn/wp-content/uploads/2023/04/1.cac-khoa-hoc-cntt-online-co-chung-chi-cho-dan-it.png" alt="Python Course">
+                    <div class="course-price">60 VND</div>
+                </div>
+                <div class="course-content">
+                    <span class="course-level intermediate">intermediate</span>
+                    <h3 class="course-title">Python for Data Science</h3>
+                    <p class="course-description">Use Python to analyze and visualize complex datasets.</p>
+                    <div class="course-meta">
+                        <span class="course-duration"><i class="far fa-clock"></i> 900 phút</span>
+                        <span class="course-lessons"><i class="far fa-file-alt"></i> 15 bài học</span>
+                    </div>
+                    <a href="/Courses/Details/3" class="course-button">Xem Chi Tiết</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="courses-cta">
+            <a href="/Courses" class="btn btn-outline">Xem Tất Cả Khóa Học</a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <h2 class="section-title">Học Viên Nói Gì Về Chúng Tôi</h2>
+
+        <div class="testimonials-slider">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Khóa học SQL Server đã giúp tôi nâng cao kỹ năng và tự tin hơn trong công việc. Cách giảng dạy dễ hiểu và thực tế."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-image">
+                        <img src="https://r2s.edu.vn/wp-content/uploads/2023/04/1.cac-khoa-hoc-cntt-online-co-chung-chi-cho-dan-it.png" alt="Nguyen Van A">
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h4 class="testimonial-author-name">Nguyễn Văn A</h4>
+                        <p class="testimonial-author-title">Nhà phát triển cơ sở dữ liệu</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p class="testimonial-text">"Chứng chỉ JavaScript từ LearningOnlineIT đã giúp tôi tìm được công việc mơ ước trong lĩnh vực phát triển web."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="testimonial-author-image">
+                        <img src="https://r2s.edu.vn/wp-content/uploads/2023/04/1.cac-khoa-hoc-cntt-online-co-chung-chi-cho-dan-it.png" alt="Tran Thi B">
+                    </div>
+                    <div class="testimonial-author-info">
+                        <h4 class="testimonial-author-name">Trần Thị B</h4>
+                        <p class="testimonial-author-title">Frontend Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2 class="cta-title">Sẵn Sàng Bắt Đầu Hành Trình Học Tập?</h2>
+            <p class="cta-description">Đăng ký ngay hôm nay để nhận ưu đãi đặc biệt cho các khóa học mới!</p>
+            <a href="/Account/Register" class="btn btn-cta">Bắt Đầu Ngay</a>
+        </div>
+    </section>
 </div>
+
+@section Scripts {
+    <script>
+        // Optional: Add any JavaScript for interactions, sliders, etc.
+        $(document).ready(function () {
+            // Example: Simple fade-in animation for sections
+            $(window).scroll(function () {
+                $('section').each(function () {
+                    var position = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+
+                    if (scroll > position - windowHeight + 200) {
+                        $(this).addClass('visible');
+                    }
+                });
+            }).scroll();
+        });
+    </script>
+}

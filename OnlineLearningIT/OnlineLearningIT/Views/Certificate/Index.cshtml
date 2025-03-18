@@ -1,0 +1,112 @@
+﻿@model IEnumerable<OnlineLearningIT.Models.Certificate>
+@{
+    ViewData["Title"] = "Danh Sách Chứng Chỉ";
+}
+
+<div class="certificate-container">
+    <!-- Header section -->
+    <div class="certificate-header">
+        <h1 class="certificate-title">Danh Sách Chứng Chỉ</h1>
+        <a href="@Url.Action("Create")" class="certificate-create-btn">Tạo Chứng Chỉ Mới</a>
+    </div>
+
+    <!-- Filter and search section -->
+    <div class="certificate-filter-section">
+        <div class="certificate-search">
+            <input type="text" placeholder="Tìm kiếm chứng chỉ..." id="certificateSearch" class="certificate-search-input">
+        </div>
+        <div class="certificate-filter">
+            <select class="certificate-filter-select" id="levelFilter">
+                <option value="">Tất cả cấp độ</option>
+            </select>
+        </div>
+    </div>
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    <!-- Certificate cards grid -->
+    <div class="certificate-grid">
+        @foreach (var item in Model)
+        {
+            <div class="certificate-card">
+                <!-- Certificate banner image -->
+                <div class="certificate-banner">
+                    <img src="https://marketplace.canva.com/EAFlVDzb7sA/2/0/1600w/canva-white-gold-elegant-modern-certificate-of-participation-DX2WYBw_kos.jpg" alt="Certificate Image" class="certificate-img">
+                    <div class="certificate-price">@(new Random().Next(50, 100)) VND</div>
+                </div>
+
+                <!-- Certificate info -->
+                <div class="certificate-info">
+                    <h3 class="certificate-name">@item.Title</h3>
+
+                    <div class="certificate-level">
+                        @{
+                            var levels = new[] { "beginner", "intermediate", "advanced" };
+                            var randomLevel = levels[new Random().Next(levels.Length)];
+                        }
+                        <span class="certificate-level-@randomLevel">@randomLevel</span>
+                        <span class="certificate-hours">@(new Random().Next(300, 1200))</span>
+                    </div>
+
+                    <p class="certificate-description">@item.Description</p>
+
+                    <div class="certificate-category">
+                        @{
+                            var categories = new[] { "Web Development", "Databases", "Data Science", "Mobile Development", "Machine Learning" };
+                            var randomCategory = categories[new Random().Next(categories.Length)];
+                        }
+                        @randomCategory
+                    </div>
+
+                    <div class="certificate-status @(item.IsActive ? "active" : "inactive")">
+                        @(item.IsActive ? "active" : "inactive")
+                    </div>
+                </div>
+
+                <!-- Certificate actions -->
+                <div class="course-actions">
+                    <a href="@Url.Action("Edit", new { id = item.CertificateId })" class="certificate-edit-btn">Sửa</a>
+                    <a href="@Url.Action("Delete", new { id = item.CertificateId })" class="certificate-delete-btn">Xóa</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            // Search functionality
+            $("#certificateSearch").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $(".certificate-card").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+
+            // Level filter functionality
+            $("#levelFilter").on("change", function () {
+                var value = $(this).val().toLowerCase();
+                if (value === "") {
+                    $(".certificate-card").show();
+                } else {
+                    $(".certificate-card").filter(function () {
+                        return $(this).find(".certificate-level span").text().toLowerCase().indexOf(value) > -1;
+                    }).show();
+                    $(".certificate-card").filter(function () {
+                        return $(this).find(".certificate-level span").text().toLowerCase().indexOf(value) === -1;
+                    }).hide();
+                }
+            });
+        });
+    </script>
+}

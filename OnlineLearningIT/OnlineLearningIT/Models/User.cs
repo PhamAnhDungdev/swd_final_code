@@ -21,7 +21,5 @@ public partial class User
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual ICollection<Course> Courses { get; set; } = new List<Course>();
-
     public virtual ICollection<UserCertificate> UserCertificates { get; set; } = new List<UserCertificate>();
 }

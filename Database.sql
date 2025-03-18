@@ -24,7 +24,7 @@ BEGIN
 END
 GO
 
--- Create Course table
+-- Create Course table with instructor_name instead of instructor_id
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'Course')
 BEGIN
     CREATE TABLE Course (
@@ -36,13 +36,33 @@ BEGIN
         price DECIMAL(10, 2),
         level VARCHAR(50), -- beginner, intermediate, advanced
         category VARCHAR(100),
-        instructor_id INT,
+        instructor_name NVARCHAR(100), -- Changed from instructor_id INT to instructor_name NVARCHAR
         status VARCHAR(20) DEFAULT 'draft', -- 'active', 'draft', 'archived'
         created_at DATETIME DEFAULT GETDATE(),
-        updated_at DATETIME DEFAULT GETDATE(),
-        
-        FOREIGN KEY (instructor_id) REFERENCES [User](user_id)
+        updated_at DATETIME DEFAULT GETDATE()
+        -- Removed foreign key constraint to User table
     );
+END
+ELSE
+BEGIN
+    -- If the table already exists, alter it to change instructor_id to instructor_name
+    IF EXISTS (SELECT * FROM sys.columns WHERE name = 'instructor_id' AND object_id = OBJECT_ID('Course'))
+    BEGIN
+        -- First drop the foreign key constraint if it exists
+        DECLARE @constraintName NVARCHAR(100)
+        SELECT @constraintName = name FROM sys.foreign_keys 
+        WHERE parent_object_id = OBJECT_ID('Course') 
+        AND referenced_object_id = OBJECT_ID('User')
+        
+        IF @constraintName IS NOT NULL
+        BEGIN
+            EXEC('ALTER TABLE Course DROP CONSTRAINT ' + @constraintName)
+        END
+        
+        -- Then alter the column
+        ALTER TABLE Course DROP COLUMN instructor_id
+        ALTER TABLE Course ADD instructor_name NVARCHAR(100)
+    END
 END
 GO
 
@@ -130,13 +150,13 @@ VALUES
     ('admin_user', 'admin@example.com', 'hashed_password_xyz', N'Admin User', 'admin');
 GO
 
--- Sample Courses
-INSERT INTO Course (title, description, image_url, duration, price, level, category, instructor_id, status)
+-- Sample Courses - Using instructor_name instead of instructor_id
+INSERT INTO Course (title, description, image_url, duration, price, level, category, instructor_name, status)
 VALUES 
-    (N'Introduction to SQL Server', N'Learn the basics of SQL Server database management and querying.', '/images/sql-basics.jpg', 600, 49.99, 'beginner', 'Databases', 1, 'active'),
-    (N'Advanced JavaScript Programming', N'Master advanced JavaScript concepts and modern frameworks.', '/images/js-advanced.jpg', 1200, 79.99, 'advanced', 'Web Development', 2, 'active'),
-    (N'Python for Data Science', N'Use Python to analyze and visualize complex datasets.', '/images/python-data.jpg', 900, 59.99, 'intermediate', 'Data Science', 1, 'active'),
-    (N'Mobile App Development with React Native', N'Build cross-platform mobile apps with React Native.', '/images/react-native.jpg', 1500, 89.99, 'intermediate', 'Mobile Development', 2, 'draft');
+    (N'Introduction to SQL Server', N'Learn the basics of SQL Server database management and querying.', '/images/sql-basics.jpg', 600, 49.99, 'beginner', 'Databases', N'John Smith', 'active'),
+    (N'Advanced JavaScript Programming', N'Master advanced JavaScript concepts and modern frameworks.', '/images/js-advanced.jpg', 1200, 79.99, 'advanced', 'Web Development', N'Mary Johnson', 'active'),
+    (N'Python for Data Science', N'Use Python to analyze and visualize complex datasets.', '/images/python-data.jpg', 900, 59.99, 'intermediate', 'Data Science', N'John Smith', 'active'),
+    (N'Mobile App Development with React Native', N'Build cross-platform mobile apps with React Native.', '/images/react-native.jpg', 1500, 89.99, 'intermediate', 'Mobile Development', N'Mary Johnson', 'draft');
 GO
 
 -- Sample Lessons
@@ -178,7 +198,7 @@ GO
 -- Sample UserCertificates with unique verification codes
 INSERT INTO UserCertificate (user_id, certificate_id, certificate_url, verification_code)
 VALUES 
-    (3, 1, '/certificates/user3-sql.pdf', 'SQLCERT-3851-XYZ'), -- Changed from ABC to XYZ
+    (3, 1, '/certificates/user3-sql.pdf', 'SQLCERT-3851-XYZ'),
     (4, 2, '/certificates/user4-js.pdf', 'JSCERT-4962-DEF'),
     (3, 3, '/certificates/user3-python.pdf', 'PYCERT-3275-GHI');
 GO
@@ -193,6 +213,7 @@ CREATE OR ALTER PROCEDURE UpdateCourse
     @Price DECIMAL(10, 2) = NULL,
     @Level VARCHAR(50) = NULL,
     @Category VARCHAR(100) = NULL,
+    @InstructorName NVARCHAR(100) = NULL, -- Changed from @InstructorId
     @Status VARCHAR(20) = NULL
 AS
 BEGIN
@@ -205,6 +226,7 @@ BEGIN
         price = ISNULL(@Price, price),
         level = ISNULL(@Level, level),
         category = ISNULL(@Category, category),
+        instructor_name = ISNULL(@InstructorName, instructor_name), -- Changed from instructor_id
         status = ISNULL(@Status, status),
         updated_at = GETDATE()
     WHERE course_id = @CourseId;

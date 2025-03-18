@@ -21,17 +21,15 @@ public partial class Course
 
     public string? Category { get; set; }
 
-    public int? InstructorId { get; set; }
-
     public string? Status { get; set; }
 
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 
-    public virtual ICollection<Certificate> Certificates { get; set; } = new List<Certificate>();
+    public string? InstructorName { get; set; }
 
-    public virtual User? Instructor { get; set; }
+    public virtual ICollection<Certificate> Certificates { get; set; } = new List<Certificate>();
 
     public virtual ICollection<Lesson> Lessons { get; set; } = new List<Lesson>();
 }

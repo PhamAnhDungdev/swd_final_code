@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\LearningContent.FPT\Spring2025\SWD392 - FE\FinalCode\OnlineLearningIT\OnlineLearningIT
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/LearningContent.FPT/Spring2025/SWD392 - FE/FinalCode/OnlineLearningIT/OnlineLearningIT/Views/Certificate/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VydGlmaWNhdGVcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/LearningContent.FPT/Spring2025/SWD392 - FE/FinalCode/OnlineLearningIT/OnlineLearningIT/Views/Certificate/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2VydGlmaWNhdGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/LearningContent.FPT/Spring2025/SWD392 - FE/FinalCode/OnlineLearningIT/OnlineLearningIT/Views/Course/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,10 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/LearningContent.FPT/Spring2025/SWD392 - FE/FinalCode/OnlineLearningIT/OnlineLearningIT/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/LearningContent.FPT/Spring2025/SWD392 - FE/FinalCode/OnlineLearningIT/OnlineLearningIT/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/LearningContent.FPT/Spring2025/SWD392 - FE/FinalCode/OnlineLearningIT/OnlineLearningIT/Views/Shared/Error.cshtml]

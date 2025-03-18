@@ -1,0 +1,81 @@
+﻿@model OnlineLearningIT.Models.Certificate
+@{
+    ViewData["Title"] = "Tạo mới chứng chỉ";
+}
+
+<div class="certificate-form-container">
+    <h1 class="certificate-heading">Tạo mới</h1>
+    <h4 class="certificate-subheading">Chứng chỉ</h4>
+    <hr class="certificate-divider" />
+
+    <div class="certificate-row">
+        <div class="certificate-col">
+            <form asp-action="Create" method="post" class="certificate-form">
+                <div asp-validation-summary="ModelOnly" class="certificate-validation-summary"></div>
+
+                <div class="certificate-form-group">
+                    <label asp-for="CourseId" class="certificate-control-label"></label>
+                    <select asp-for="CourseId" class="certificate-form-control" asp-items="ViewBag.CourseId">
+                        <option value="">-- Select Course --</option>
+                        @foreach (var c in ViewBag.Course)
+                        {
+                            <option value="@c.CourseId">@c.Title</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="certificate-form-group">
+                    <label asp-for="Title" class="certificate-control-label"></label>
+                    <input asp-for="Title" class="certificate-form-control" />
+                    <span asp-validation-for="Title" class="certificate-text-danger"></span>
+                </div>
+
+                <div class="certificate-form-group">
+                    <label asp-for="Description" class="certificate-control-label"></label>
+                    <input asp-for="Description" class="certificate-form-control" />
+                    <span asp-validation-for="Description" class="certificate-text-danger"></span>
+                </div>
+
+                <div class="certificate-form-group">
+                    <label asp-for="TemplateUrl" class="certificate-control-label"></label>
+                    <input asp-for="TemplateUrl" class="certificate-form-control" />
+                    <span asp-validation-for="TemplateUrl" class="certificate-text-danger"></span>
+                </div>
+
+                <div class="certificate-form-group">
+                    <input type="submit" value="Thêm mới" class="certificate-btn certificate-btn-primary" />
+                </div>
+            </form>
+        </div>
+
+        <div class="certificate-col">
+            <div class="certificate-guidance">
+                <h2 class="certificate-guidance-title">Hướng dẫn</h2>
+                <ul class="certificate-guidance-list">
+                    <li class="certificate-guidance-item">
+                        <strong>Tiêu đề:</strong> Đặt tiêu đề ngắn gọn, thu hút người học.
+                    </li>
+                    <li class="certificate-guidance-item">
+                        <strong>Mô tả:</strong> Cung cấp thông tin chi tiết về nội dung khóa học và lợi ích của nó.
+                    </li>
+                    <li class="certificate-guidance-item">
+                        <strong>Hình ảnh:</strong> Chọn hình ảnh chất lượng cao, thể hiện nội dung khóa học.
+                    </li>
+                    <li class="certificate-guidance-item">
+                        <strong>Giá:</strong> Đặt giá phù hợp với giá trị mang lại và đối tượng học viên.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <a asp-action="Index" class="certificate-link certificate-back-link">Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
