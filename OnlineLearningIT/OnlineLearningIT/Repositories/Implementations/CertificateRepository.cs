@@ -46,15 +46,15 @@ namespace OnlineLearningIT.Repositories.Implementations
                 return false;
             }
 
-            if (certificate.TemplateUrl != null)
-            {
-                bool isValidUrl = Uri.TryCreate(certificate.TemplateUrl, UriKind.Absolute, out _);
-                if (!isValidUrl)
-                {
-                    await Console.Out.WriteLineAsync($"URL validation failed: {certificate.TemplateUrl}");
-                    return false;
-                }
-            }
+            //if (certificate.TemplateUrl != null)
+            //{
+            //    bool isValidUrl = Uri.TryCreate(certificate.TemplateUrl, UriKind.Absolute, out _);
+            //    if (!isValidUrl)
+            //    {
+            //        await Console.Out.WriteLineAsync($"URL validation failed: {certificate.TemplateUrl}");
+            //        return false;
+            //    }
+            //}
 
             await Console.Out.WriteLineAsync("Certificate validation passed");
             return true;

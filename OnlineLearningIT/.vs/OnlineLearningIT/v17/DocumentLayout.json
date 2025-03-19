@@ -3,32 +3,8 @@
   "WorkspaceRootPath": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\repositories\\implementations\\certificaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\repositories\\implementations\\certificaterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\repositories\\implementations\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\repositories\\implementations\\courserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\controllers\\certificatecontroller\\certificatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\controllers\\certificatecontroller\\certificatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\services\\implementations\\certificateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\services\\implementations\\certificateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\services\\interfaces\\icertificateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\services\\interfaces\\icertificateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\controllers\\coursecontroller\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\controllers\\coursecontroller\\coursecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\views\\certificate\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\views\\certificate\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|d:\\learningcontent.fpt\\spring2025\\swd392 - fe\\finalcode\\onlinelearningit\\onlinelearningit\\models\\certificate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03639E60-A4A1-45ED-93AD-0ECF33E321F7}|OnlineLearningIT\\OnlineLearningIT.csproj|solutionrelative:onlinelearningit\\models\\certificate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,93 +38,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CourseRepository.cs",
-              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Repositories\\Implementations\\CourseRepository.cs",
-              "RelativeDocumentMoniker": "OnlineLearningIT\\Repositories\\Implementations\\CourseRepository.cs",
-              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Repositories\\Implementations\\CourseRepository.cs",
-              "RelativeToolTip": "OnlineLearningIT\\Repositories\\Implementations\\CourseRepository.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBsAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:09:45.052Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CertificateService.cs",
-              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Services\\Implementations\\CertificateService.cs",
-              "RelativeDocumentMoniker": "OnlineLearningIT\\Services\\Implementations\\CertificateService.cs",
-              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Services\\Implementations\\CertificateService.cs",
-              "RelativeToolTip": "OnlineLearningIT\\Services\\Implementations\\CertificateService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:04:25.647Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ICertificateService.cs",
-              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Services\\Interfaces\\ICertificateService.cs",
-              "RelativeDocumentMoniker": "OnlineLearningIT\\Services\\Interfaces\\ICertificateService.cs",
-              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Services\\Interfaces\\ICertificateService.cs",
-              "RelativeToolTip": "OnlineLearningIT\\Services\\Interfaces\\ICertificateService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:04:23.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CertificateRepository.cs",
-              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Repositories\\Implementations\\CertificateRepository.cs",
-              "RelativeDocumentMoniker": "OnlineLearningIT\\Repositories\\Implementations\\CertificateRepository.cs",
-              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Repositories\\Implementations\\CertificateRepository.cs",
-              "RelativeToolTip": "OnlineLearningIT\\Repositories\\Implementations\\CertificateRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
+              "Title": "Certificate.cs",
+              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Models\\Certificate.cs",
+              "RelativeDocumentMoniker": "OnlineLearningIT\\Models\\Certificate.cs",
+              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Models\\Certificate.cs",
+              "RelativeToolTip": "OnlineLearningIT\\Models\\Certificate.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T15:01:27.76Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Certificate\\Create.cshtml",
-              "RelativeDocumentMoniker": "OnlineLearningIT\\Views\\Certificate\\Create.cshtml",
-              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Views\\Certificate\\Create.cshtml",
-              "RelativeToolTip": "OnlineLearningIT\\Views\\Certificate\\Create.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAAsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-19T15:00:30.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CourseController.cs",
-              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Controllers\\CourseController\\CourseController.cs",
-              "RelativeDocumentMoniker": "OnlineLearningIT\\Controllers\\CourseController\\CourseController.cs",
-              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Controllers\\CourseController\\CourseController.cs",
-              "RelativeToolTip": "OnlineLearningIT\\Controllers\\CourseController\\CourseController.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T14:45:43.653Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CertificateController.cs",
-              "DocumentMoniker": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Controllers\\CertificateController\\CertificateController.cs",
-              "RelativeDocumentMoniker": "OnlineLearningIT\\Controllers\\CertificateController\\CertificateController.cs",
-              "ToolTip": "D:\\LearningContent.FPT\\Spring2025\\SWD392 - FE\\FinalCode\\OnlineLearningIT\\OnlineLearningIT\\Controllers\\CertificateController\\CertificateController.cs",
-              "RelativeToolTip": "OnlineLearningIT\\Controllers\\CertificateController\\CertificateController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAkwCUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T14:44:45.61Z",
+              "WhenOpened": "2025-03-19T16:07:04.768Z",
               "EditorCaption": ""
             }
           ]

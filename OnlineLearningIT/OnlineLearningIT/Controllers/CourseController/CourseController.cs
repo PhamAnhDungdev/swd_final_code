@@ -17,10 +17,9 @@ namespace OnlineLearningIT.Controllers.CourseController
             _courseService = courseService;
         }
 
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            var course = _context.Courses.ToList();
-            return View(course);
+            return View(_courseService.GetListCourse());
         }
 
         public ActionResult Edit(int id)
@@ -37,8 +36,6 @@ namespace OnlineLearningIT.Controllers.CourseController
             {
                 try
                 {
-                    //_context.Entry(course).State = EntityState.Modified;
-                    //_context.SaveChanges();
                     var result = await _courseService.UpdateCourse(course);
                     var valid = await _courseService.ValidateCourse(course);
                     if (valid)

@@ -6,5 +6,7 @@ namespace OnlineLearningIT.Services.Interfaces
         Task<bool> UpdateCourse(Course course);
 
         Task<bool> ValidateCourse(Course course);
+
+        Task<List<Course>> GetListCourse();
     }
 }

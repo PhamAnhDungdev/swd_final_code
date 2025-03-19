@@ -13,6 +13,13 @@ namespace OnlineLearningIT.Repositories.Implementations
         {
             _context = context;
         }
+
+        public async Task<List<Course>> GetListCourse()
+        {
+            var listCourse = _context.Courses.ToList();
+            return listCourse;
+        }
+
         public async Task<bool> UpdateCourse(Course course)
         {
             var cOld = await _context.Courses.FirstOrDefaultAsync(c => c.CourseId == course.CourseId);
