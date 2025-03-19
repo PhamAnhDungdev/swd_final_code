@@ -7,7 +7,18 @@
     <h1 class="certificate-heading">Tạo mới</h1>
     <h4 class="certificate-subheading">Chứng chỉ</h4>
     <hr class="certificate-divider" />
-
+    @if (TempData["ErrorMessage"] != null)
+    {
+        <div class="alert alert-danger">
+            @TempData["ErrorMessage"]
+        </div>
+    }
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["SuccessMessage"]
+        </div>
+    }
     <div class="certificate-row">
         <div class="certificate-col">
             <form asp-action="Create" method="post" class="certificate-form">

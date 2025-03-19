@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using OnlineLearningIT.Models;
+using OnlineLearningIT.Repositories.Implementations;
+using OnlineLearningIT.Repositories.Interfaces;
+using OnlineLearningIT.Services.Implementations;
+using OnlineLearningIT.Services.Interfaces;
 
 namespace OnlineLearningIT
 {
@@ -16,8 +20,11 @@ namespace OnlineLearningIT
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+            builder.Services.AddScoped<ICourseService, CourseService>();
+            builder.Services.AddScoped<ICertificateRepository, CertificateRepository>();
+            builder.Services.AddScoped<ICertificateService, CertificateService>();
             var app = builder.Build();
-
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
             {

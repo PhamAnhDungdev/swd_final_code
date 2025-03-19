@@ -1,14 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using OnlineLearningIT.Models;
+using OnlineLearningIT.Services.Interfaces;
 namespace OnlineLearningIT.Controllers.CertificateController
 {
     public class CertificateController : Controller
     {
         private OnlineLearningItContext _context;
-        public CertificateController(OnlineLearningItContext context)
+        private readonly ICertificateService _certificateService;
+        public CertificateController(OnlineLearningItContext context, ICertificateService certificateService)
         {
             _context = context;
+            _certificateService = certificateService;
         }
 
         public ActionResult Index()
@@ -31,11 +33,27 @@ namespace OnlineLearningIT.Controllers.CertificateController
         }
 
         [HttpPost]
-        public ActionResult Create(Certificate certificate)
+        public async Task<ActionResult> Create(Certificate certificate)
         {
-            _context.Certificates.Add(certificate);
-            _context.SaveChanges();
-            TempData["SuccessMessage"] = "Thêm mới chứng chỉ thành công!";
+
+            if (await _certificateService.ValidateCertificate(certificate))
+            {
+                var result = await _certificateService.AddNewCertificate(certificate);
+                if (result)
+                {
+                    TempData["SuccessMessage"] = "Thêm mới chứng chỉ thành công!";
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = "Thêm mới chứng chỉ thất bại!";
+                    return RedirectToAction("Create", "Certificate");
+                }
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Input chứng chỉ không hợp lệ!";
+                return RedirectToAction("Create", "Certificate");
+            }
             return RedirectToAction("Index", "Certificate");
         }
     }
