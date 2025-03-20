@@ -47,10 +47,10 @@ namespace OnlineLearningIT.Repositories.Implementations
                 return false;
             }
 
-            if (course.ImageUrl != null && !Uri.TryCreate(course.ImageUrl, UriKind.Absolute, out _))
-            {
-                return false;
-            }
+            //if (course.ImageUrl != null && !Uri.TryCreate(course.ImageUrl, UriKind.Absolute, out _))
+            //{
+            //    return false;
+            //}
 
             if (course.Duration.HasValue && course.Duration.Value <= 0)
             {
@@ -62,11 +62,11 @@ namespace OnlineLearningIT.Repositories.Implementations
                 return false;
             }
 
-            string[] validLevels = { "Beginner", "Intermediate", "Advanced", "All Levels" };
-            if (course.Level != null && !validLevels.Contains(course.Level))
-            {
-                return false;
-            }
+            //string[] validLevels = { "Beginner", "Intermediate", "Advanced", "All Levels" };
+            //if (course.Level != null && !validLevels.Contains(course.Level))
+            //{
+            //    return false;
+            //}
 
             return true;
         }

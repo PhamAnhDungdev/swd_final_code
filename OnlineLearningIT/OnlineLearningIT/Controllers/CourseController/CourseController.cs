@@ -19,7 +19,8 @@ namespace OnlineLearningIT.Controllers.CourseController
 
         public async Task<ActionResult> Index()
         {
-            return View(_courseService.GetListCourse());
+            var course = await _courseService.GetListCourse();
+            return View(course);
         }
 
         public ActionResult Edit(int id)
@@ -36,10 +37,10 @@ namespace OnlineLearningIT.Controllers.CourseController
             {
                 try
                 {
-                    var result = await _courseService.UpdateCourse(course);
                     var valid = await _courseService.ValidateCourse(course);
                     if (valid)
                     {
+                        var result = await _courseService.UpdateCourse(course);
                         if (result)
                         {
                             TempData["SuccessMessage"] = "Cập nhật khóa học thành công!";
@@ -48,7 +49,8 @@ namespace OnlineLearningIT.Controllers.CourseController
                         {
                             TempData["ErrorMessage"] = "Cập nhật khóa học thất bại!";
                         }
-                    } else
+                    }
+                    else
                     {
                         TempData["ErrorMessage"] = "Input không hợp lệ, xem xét lại các giá trị";
                     }
